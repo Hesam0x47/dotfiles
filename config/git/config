@@ -14,3 +14,12 @@
         added = yellow
         changed = green
         untracked = cyan
+
+[alias]
+	s = status --short --branch
+[pager]
+	status = true
+[core]
+	pager = less --chop-long-lines --HILITE-UNREAD --ignore-case --incsearch --jump-target=4 --LONG-PROMPT --no-init --quit-if-one-screen --RAW-CONTROL-CHARS --use-color --window=-4
+[init]
+	defaultBranch = main
