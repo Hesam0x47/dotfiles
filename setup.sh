@@ -1,6 +1,6 @@
 set -x
 
-mkdir -p ~/.config
+mkdir -p ~/.config/git
 
 [ -e ~/.gitconfig ] && mv ~/.gitconfig ~/.config/git/config
 
