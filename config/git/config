@@ -17,9 +17,23 @@
 
 [alias]
 	s = status --short --branch
+	st = status
+        co = checkout
+        br = branch
+        ci = commit
+        df = diff
+        lg = log --graph --oneline --decorate
+        camp = "!f() { if [ \"$2\" = \"--no-verify\" ]; then git commit -am \"$1\" --no-verify; else git commit -am \"$1\"; fi && git push && git status;  }; f"
+
 [pager]
 	status = true
+
 [core]
 	pager = less --chop-long-lines --HILITE-UNREAD --ignore-case --incsearch --jump-target=4 --LONG-PROMPT --no-init --quit-if-one-screen --RAW-CONTROL-CHARS --use-color --window=-4
+
 [init]
 	defaultBranch = main
+
+[core]
+    autocrlf = input
+    whitespace = space-before-tab
